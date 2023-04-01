@@ -57,21 +57,14 @@ public class Job : IJob {
 		}
 	}
 
-	public static bool IsValidId( uint id ) {
-		return id >= 1 && id <= 999;
-	}
+	public static bool IsValidId(uint id) => id >= 1 && id <= 999;
 
-	public static bool IsValidExecutionTime( uint executiontime ) {
-		return executiontime > 0;
-    }
+	public static bool IsValidExecutionTime(uint executionTime) => executionTime > 0;
 
-    public static bool IsValidPriority( uint priority ) {
-		return priority >= 1 && priority <= 9;
-    }
+	public static bool IsValidPriority(uint priority) => priority >= 1 && priority <= 9;
 
-    public static bool IsTimeReceived(uint time) {
-		return time > 0;
-    }
+	public static bool IsTimeReceived(uint time) => time > 0;
+
 
     public override string ToString() {
 		return $"Job(jobId: {id}, timeReceived: {timeReceived}, executionTime: {executionTime}, priority: {priority})";

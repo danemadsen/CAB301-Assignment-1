@@ -22,11 +22,8 @@ public class JobCollection : IJobCollection {
 
 	public bool Add( IJob job ) {
         if( Contains( job.Id ) ) return false;
-        else {
-            jobs[count] = job;
-            count++;
-            return true;
-        }
+        jobs[count++] = job;
+        return true;
     }
 
     public bool Contains(uint id) {
