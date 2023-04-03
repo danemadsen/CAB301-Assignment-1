@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.26)  3 APR 2023 10:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.26)  3 APR 2023 11:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -108,34 +108,59 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--31
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 41--45
+Underfull \hbox (badness 10000) in paragraph at lines 32--40
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--46
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 57--62
+Underfull \hbox (badness 10000) in paragraph at lines 59--64
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--76
+Underfull \hbox (badness 10000) in paragraph at lines 65--73
 
  []
 
-[3] [4] (./CAB301-A1-Report.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 75--79
+
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 93--98
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--111
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 113--116
+
+ []
+
+[4] [5] (./CAB301-A1-Report.aux) ) 
 Here is how much of TeX's memory you used:
  1349 strings out of 476025
  22700 string characters out of 5794015
- 1855382 words of memory out of 5000000
+ 1857382 words of memory out of 5000000
  21829 multiletter control sequences out of 15000+600000
  517240 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,5n,62p,280b,186s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on CAB301-A1-Report.pdf (5 pages, 193006 bytes).
+Output written on CAB301-A1-Report.pdf (6 pages, 199008 bytes).
 PDF statistics:
- 51 PDF objects out of 1000 (max. 8388607)
- 30 compressed objects within 1 object stream
+ 54 PDF objects out of 1000 (max. 8388607)
+ 32 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

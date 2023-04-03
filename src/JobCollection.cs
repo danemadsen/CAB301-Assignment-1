@@ -21,7 +21,9 @@ public class JobCollection : IJobCollection {
 	}
 
 	public bool Add( IJob job ) {
-        if( Contains( job.Id ) ) return false;
+        for( int i = 0; i < count; i++ ) {
+            if( jobs[i].Id == id ) return false;
+        }
         jobs[count] = job;
         count++;
         return true;
