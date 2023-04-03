@@ -9,8 +9,7 @@ public class Scheduler : IScheduler {
 
 public IJob[] FirstComeFirstServed()
 {
-    IJob[] sortedJobs = new IJob[Jobs.Length];
-    Array.Copy(Jobs, sortedJobs, Jobs.Length);
+    IJob[] sortedJobs = Jobs.ToArray();
     for (int i = 0; i < sortedJobs.Length - 1; i++)
     {
         for (int j = i + 1; j < sortedJobs.Length; j++)
@@ -28,8 +27,7 @@ public IJob[] FirstComeFirstServed()
 
 public IJob[] Priority()
 {
-    IJob[] sortedJobs = new IJob[Jobs.Length];
-    Array.Copy(Jobs, sortedJobs, Jobs.Length);
+    IJob[] sortedJobs = Jobs.ToArray();
     for (int i = 0; i < sortedJobs.Length - 1; i++)
     {
         for (int j = i + 1; j < sortedJobs.Length; j++)
@@ -47,8 +45,7 @@ public IJob[] Priority()
 
 public IJob[] ShortestJobFirst()
 {
-    IJob[] sortedJobs = new IJob[Jobs.Length];
-    Array.Copy(Jobs, sortedJobs, Jobs.Length);
+    IJob[] sortedJobs = Jobs.ToArray();
     for (int i = 0; i < sortedJobs.Length - 1; i++)
     {
         for (int j = i + 1; j < sortedJobs.Length; j++)

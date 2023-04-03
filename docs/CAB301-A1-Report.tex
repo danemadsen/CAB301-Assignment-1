@@ -30,13 +30,13 @@
 				indicating the ID is invalid.\\
 				
 				\textbf{ALGORITHM} \textit{IsValidId(v)}\\
-				\null\qquad\quad// Given an integer (\textit{v})\\
-				\null\qquad\quad// Returns True if \textit{v} is a valid job ID\\
-				\null\qquad\quad// Otherwise returns False\\
-				\null\qquad\quad\textbf{if} \textit{$v \geq 1$} \textbf{and} \textit{$v \leq 999$}\\
-				\null\qquad\qquad\textbf{return} \textit{True}\\
-				\null\qquad\quad\textbf{else}\\
-				\null\qquad\qquad\textbf{return} \textit{False}\\
+				\null\hspace{1cm}// Given an integer (\textit{v})\\
+				\null\hspace{1cm}// Returns True if \textit{v} is a valid job ID\\
+				\null\hspace{1cm}// Otherwise returns False\\
+				\null\hspace{1cm}\textbf{if} \textit{$v \geq 1$} \textbf{and} \textit{$v \leq 999$}\\
+				\null\hspace{2cm}\textbf{return} \textit{True}\\
+				\null\hspace{1cm}\textbf{else}\\
+				\null\hspace{2cm}\textbf{return} \textit{False}\\
 
 			\subsubsection{IsValidExecutionTime Method}
 				This method simply checks whether a provided job execution time is valid. It achieves 
@@ -45,13 +45,13 @@
 				otherwise it returns false indicating the execution time is invalid.\\
 
 				\textbf{ALGORITHM} \textit{IsValidExecutionTime(v)}\\
-				\null\qquad\quad// Given an integer (\textit{v})\\
-				\null\qquad\quad// Returns True if \textit{v} is a valid job execution time\\
-				\null\qquad\quad// Otherwise returns False\\
-				\null\qquad\quad\textbf{if} \textit{$v > 0$}\\
-				\null\qquad\qquad\textbf{return} \textit{True}\\
-				\null\qquad\quad\textbf{else}\\
-				\null\qquad\qquad\textbf{return} \textit{False}
+				\null\hspace{1cm}// Given an integer (\textit{v})\\
+				\null\hspace{1cm}// Returns True if \textit{v} is a valid job execution time\\
+				\null\hspace{1cm}// Otherwise returns False\\
+				\null\hspace{1cm}\textbf{if} \textit{$v > 0$}\\
+				\null\hspace{2cm}\textbf{return} \textit{True}\\
+				\null\hspace{1cm}\textbf{else}\\
+				\null\hspace{2cm}\textbf{return} \textit{False}
 
 			\newpage
 
@@ -63,13 +63,13 @@
 				indicating the priority is invalid.\\
 
 				\textbf{ALGORITHM} \textit{IsValidPriority(v)}\\
-				\null\qquad\quad// Given an integer (\textit{v})\\
-				\null\qquad\quad// Returns True if \textit{v} is a valid job priority\\
-				\null\qquad\quad// Otherwise returns False\\
-				\null\qquad\quad\textbf{if} \textit{$v \geq 1$} \textbf{and} \textit{$v \leq 9$}\\
-				\null\qquad\qquad\textbf{return} \textit{True}\\
-				\null\qquad\quad\textbf{else}\\
-				\null\qquad\qquad\textbf{return} \textit{False}\\
+				\null\hspace{1cm}// Given an integer (\textit{v})\\
+				\null\hspace{1cm}// Returns True if \textit{v} is a valid job priority\\
+				\null\hspace{1cm}// Otherwise returns False\\
+				\null\hspace{1cm}\textbf{if} \textit{$v \geq 1$} \textbf{and} \textit{$v \leq 9$}\\
+				\null\hspace{2cm}\textbf{return} \textit{True}\\
+				\null\hspace{1cm}\textbf{else}\\
+				\null\hspace{2cm}\textbf{return} \textit{False}\\
 			
 			\subsubsection{IsTimeReceived Method}
 				This method checks whether a provided job time received is valid. It achieves this by
@@ -78,13 +78,13 @@
 				it returns false indicating the time received is invalid.\\
 
 				\textbf{ALGORITHM} \textit{IsTimeReceived(v)}\\
-				\null\qquad\quad// Given a job time received (\textit{v})\\
-				\null\qquad\quad// Returns True if \textit{v} is a valid time received\\
-				\null\qquad\quad// Otherwise returns False\\
-				\null\qquad\quad\textbf{if} \textit{$v > 0$}\\
-				\null\qquad\qquad\textbf{return} \textit{True}\\
-				\null\qquad\quad\textbf{else}\\
-				\null\qquad\qquad\textbf{return} \textit{False}
+				\null\hspace{1cm}// Given a job time received (\textit{v})\\
+				\null\hspace{1cm}// Returns True if \textit{v} is a valid time received\\
+				\null\hspace{1cm}// Otherwise returns False\\
+				\null\hspace{1cm}\textbf{if} \textit{$v > 0$}\\
+				\null\hspace{2cm}\textbf{return} \textit{True}\\
+				\null\hspace{1cm}\textbf{else}\\
+				\null\hspace{2cm}\textbf{return} \textit{False}
 		
 		\newpage
 			
@@ -97,17 +97,17 @@
 				variable and returns true.\\
 				
 				\textbf{ALGORITHM} \textit{Add(v)}\\
-				\null\qquad\quad// Let (\textit{n}) be count\\
-				\null\qquad\quad// Given a job (\textit{v})\\
-				\null\qquad\quad// Returns True if \textit{v} was added to the jobs array (\textit{J})\\
-				\null\qquad\quad// Otherwise returns False\\
-				\null\qquad\quad\textbf{for} \textit{$i \gets 0$} \textbf{in} \textit{n - 1} \textbf{do}\\
-				\null\qquad\qquad\textbf{if} \textit{$v.id = J[i].id$}\\
-				\null\qquad\qquad\quad\textbf{return} \textit{False}\\
-				\null\qquad\quad\textbf{else}\\
-				\null\qquad\qquad\textit{$J[n] \gets v$}\\
-				\null\qquad\qquad\textit{$n \gets n + 1$}\\
-				\null\qquad\qquad\textbf{return} \textit{True}\\
+				\null\hspace{1cm}// Let (\textit{n}) be count\\
+				\null\hspace{1cm}// Given a job (\textit{v})\\
+				\null\hspace{1cm}// Returns True if \textit{v} was added to the jobs array (\textit{J})\\
+				\null\hspace{1cm}// Otherwise returns False\\
+				\null\hspace{1cm}\textbf{for} \textit{$i \gets 0$} \textbf{in} \textit{n - 1} \textbf{do}\\
+				\null\hspace{2cm}\textbf{if} \textit{$v.id = J[i].id$}\\
+				\null\hspace{3cm}\textbf{return} \textit{False}\\
+				\null\hspace{1cm}\textbf{else}\\
+				\null\hspace{2cm}\textit{$J[n] \gets v$}\\
+				\null\hspace{2cm}\textit{$n \gets n + 1$}\\
+				\null\hspace{2cm}\textbf{return} \textit{True}\\
 
 			\subsubsection{Contains Method}
 				This method is used to check if a job exists in the job collection. It achieves this by 
@@ -115,15 +115,15 @@
 				a job with the same ID the method returns true, otherwise it returns false.\\
 
 				\textbf{ALGORITHM} \textit{Contains(v)}\\
-				\null\qquad\quad// Let (\textit{n}) be count\\
-				\null\qquad\quad// Given an integer (\textit{v})\\
-				\null\qquad\quad// Returns True if a job with the ID \textit{v} exists in the jobs array (\textit{J})\\
-				\null\qquad\quad// Otherwise returns False\\
-				\null\qquad\quad\textbf{for} \textit{$i \gets 0$} \textbf{in} \textit{n - 1} \textbf{do}\\
-				\null\qquad\qquad\textbf{if} \textit{$v = J[i].id$}\\
-				\null\qquad\qquad\quad\textbf{return} \textit{True}\\
-				\null\qquad\quad\textbf{else}\\
-				\null\qquad\qquad\textbf{return} \textit{False}
+				\null\hspace{1cm}// Let (\textit{n}) be count\\
+				\null\hspace{1cm}// Given an integer (\textit{v})\\
+				\null\hspace{1cm}// Returns True if a job with the ID \textit{v} exists in the jobs array (\textit{J})\\
+				\null\hspace{1cm}// Otherwise returns False\\
+				\null\hspace{1cm}\textbf{for} \textit{$i \gets 0$} \textbf{in} \textit{n - 1} \textbf{do}\\
+				\null\hspace{2cm}\textbf{if} \textit{$v = J[i].id$}\\
+				\null\hspace{3cm}\textbf{return} \textit{True}\\
+				\null\hspace{1cm}\textbf{else}\\
+				\null\hspace{2cm}\textbf{return} \textit{False}
 			
 			\newpage
 
@@ -133,14 +133,14 @@
 				otherwise it returns null.\\
 
 				\textbf{ALGORITHM} \textit{Find(v)}\\
-				\null\qquad\quad// Let (\textit{n}) be count\\
-				\null\qquad\quad// Given an integer (\textit{v})\\
-				\null\qquad\quad// Returns the job with the ID \textit{v} if it exists in the jobs array (\textit{J})\\
-				\null\qquad\quad// Otherwise returns null\\
-				\null\qquad\quad\textbf{for} \textit{$i \gets 0$} \textbf{in} \textit{n - 1} \textbf{do}\\
-				\null\qquad\qquad\textbf{if} \textit{$v = J[i].id$}\\
-				\null\qquad\qquad\quad\textbf{return} \textit{J[i]}\\
-				\null\qquad\quad\textbf{return} \textit{null}\\
+				\null\hspace{1cm}// Let (\textit{n}) be count\\
+				\null\hspace{1cm}// Given an integer (\textit{v})\\
+				\null\hspace{1cm}// Returns the job with the ID \textit{v} if it exists in the jobs array (\textit{J})\\
+				\null\hspace{1cm}// Otherwise returns null\\
+				\null\hspace{1cm}\textbf{for} \textit{$i \gets 0$} \textbf{in} \textit{n - 1} \textbf{do}\\
+				\null\hspace{2cm}\textbf{if} \textit{$v = J[i].id$}\\
+				\null\hspace{3cm}\textbf{return} \textit{J[i]}\\
+				\null\hspace{1cm}\textbf{return} \textit{null}\\
 
 			\subsubsection{Remove Method}
 				This method is used to remove a job from the job collection. It achieves this by using the 
@@ -149,18 +149,18 @@
 				the method returns false.\\
 
 				\textbf{ALGORITHM} \textit{Remove(v)}\\
-				\null\qquad\quad// Let (\textit{n}) be count\\
-				\null\qquad\quad// Given an integer (\textit{v})\\
-				\null\qquad\quad// Returns True if a job with the ID \textit{v} was removed\\
-				\null\qquad\quad// from the jobs array (\textit{J})\\
-				\null\qquad\quad// Otherwise returns False\\
-				\null\qquad\quad\textbf{for} \textit{$i \gets 0$} \textbf{in} \textit{n - 1} \textbf{do}\\
-				\null\qquad\qquad\textbf{if} \textit{$v = J[i].id$}\\
-				\null\qquad\qquad\qquad\textbf{for} \textit{$j \gets 0$} \textbf{in} \textit{n - 2} \textbf{do}\\
-				\null\qquad\qquad\qquad\quad\textit{$J[j] \gets J[j + 1]$}\\
-				\null\qquad\qquad\qquad\textit{$n \gets n - 1$}\\
-				\null\qquad\qquad\qquad\textbf{return} \textit{True}\\
-				\null\qquad\quad\textbf{return} \textit{False}\\
+				\null\hspace{1cm}// Let (\textit{n}) be count\\
+				\null\hspace{1cm}// Given an integer (\textit{v})\\
+				\null\hspace{1cm}// Returns True if a job with the ID \textit{v} was removed\\
+				\null\hspace{1cm}// from the jobs array (\textit{J})\\
+				\null\hspace{1cm}// Otherwise returns False\\
+				\null\hspace{1cm}\textbf{for} \textit{$i \gets 0$} \textbf{in} \textit{n - 1} \textbf{do}\\
+				\null\hspace{2cm}\textbf{if} \textit{$v = J[i].id$}\\
+				\null\hspace{4cm}\textbf{for} \textit{$j \gets 0$} \textbf{in} \textit{n - 2} \textbf{do}\\
+				\null\hspace{5cm}\textit{$J[j] \gets J[j + 1]$}\\
+				\null\hspace{4cm}\textit{$n \gets n - 1$}\\
+				\null\hspace{4cm}\textbf{return} \textit{True}\\
+				\null\hspace{1cm}\textbf{return} \textit{False}\\
 			
 			\newpage
 			
@@ -170,12 +170,12 @@
 				collection to the new array. The method then returns the new array.\\
 
 				\textbf{ALGORITHM} \textit{ToArray()}\\
-				\null\qquad\quad// Let (\textit{n}) be count\\
-				\null\qquad\quad// Returns a new array of copied from the jobs array (\textit{J})\\
-				\null\qquad\quad\textit{$A \gets new Job[n]$}\\
-				\null\qquad\quad\textbf{for} \textit{$i \gets 0$} \textbf{in} \textit{n - 1} \textbf{do}\\
-				\null\qquad\qquad\textit{$A[i] \gets J[i]$}\\
-				\null\qquad\quad\textbf{return} \textit{A}\\
+				\null\hspace{1cm}// Let (\textit{n}) be count\\
+				\null\hspace{1cm}// Returns a new array of copied from the jobs array (\textit{J})\\
+				\null\hspace{1cm}\textit{$A \gets new Job[n]$}\\
+				\null\hspace{1cm}\textbf{for} \textit{$i \gets 0$} \textbf{in} \textit{n - 1} \textbf{do}\\
+				\null\hspace{2cm}\textit{$A[i] \gets J[i]$}\\
+				\null\hspace{1cm}\textbf{return} \textit{A}\\
 				
 		\subsection{Scheduler ADT}
 	
