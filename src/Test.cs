@@ -106,4 +106,15 @@ public class Test
         Jobs.Add(newJob);
         Assert.True(Jobs.Remove(newJob.Id));
     }
+
+    [Fact]
+    public void ToArrayTest()
+    {
+        IJob newJob = new Job(1, 1, 1, 1);
+        IJobCollection Jobs = new JobCollection(2);
+
+        Assert.Empty(Jobs.ToArray());
+        Jobs.Add(newJob);
+        Assert.Single(Jobs.ToArray());
+    }
 }
