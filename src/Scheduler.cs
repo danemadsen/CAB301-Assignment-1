@@ -53,10 +53,9 @@ public IJob[] Priority()
 public IJob[] ShortestJobFirst()
 {
     IJob[] sortedJobs = Jobs.ToArray();
-    int n = sortedJobs.Length;
-    for (int i = 0; i < n - 1; i++)
+    for (int i = 0; i < sortedJobs.Length - 1; i++)
     {
-        for (int j = 0; j < n - i - 1; j++)
+        for (int j = 0; j < sortedJobs.Length - i - 1; j++)
         {
             if (sortedJobs[j].ExecutionTime > sortedJobs[j + 1].ExecutionTime)
             {

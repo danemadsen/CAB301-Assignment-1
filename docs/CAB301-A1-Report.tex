@@ -20,28 +20,53 @@
 	\tableofcontents
 	\newpage
 	
-	\section{Algorithm Design}
+	\section{Algorithm Design and Analysis}
 		\subsection{FirstComeFirstServed Method}
 			This method is used to sort jobs for first come first served scheduling. It achieves 
-			this by using insertion sort to sort the jobs by their arrival time. The algorithm 
-			
+			this by using the selection sort algorithm to sort the jobs by their arrival time.\\
 		
 			\textbf{ALGORITHM} \textit{FirstComeFirstServed()}\\
-			\null\hspace{1cm}// Let (\textit{n}) be count\\
 			\null\hspace{1cm}// Returns a new array of jobs sorted by their arrival time\\
-			\null\hspace{1cm}\textit{$A \gets J.ToArray()$}\\
-			\null\hspace{1cm}\textbf{for} \textit{$i \gets 0$} \textbf{in} \textit{n - 1} \textbf{do}\\
-			\null\hspace{2cm}\textbf{for} \textit{$j \gets 0$} \textbf{in} \textit{n - 2} \textbf{do}\\
-			\null\hspace{3cm}\textbf{if} \textit{$A[j].arrivalTime > A[j + 1].arrivalTime$}\\
+			\null\hspace{1cm}\textit{$A \gets Jobs.ToArray()$}\\
+			\null\hspace{1cm}\textbf{for} \textit{$i \gets 0$} \textbf{in} \textit{A.Length - 1} \textbf{do}\\
+			\null\hspace{2cm}\textbf{for} \textit{$j \gets i + 1$} \textbf{in} \textit{A.Length} \textbf{do}\\
+			\null\hspace{3cm}\textbf{if} \textit{$A[i].TimeRecieved > A[j].TimeRecieved$}\\
+			\null\hspace{4cm}\textit{$temp \gets A[i]$}\\
+			\null\hspace{4cm}\textit{$A[i] \gets A[j]$}\\
+			\null\hspace{4cm}\textit{$A[j] \gets temp$}\\
+			\null\hspace{1cm}\textbf{return} \textit{A}\\
+
+		\subsection{Priority Method}
+			This method is used to sort jobs for priority scheduling. It achieves this by using the 
+			insertion sort algorithm to sort the jobs by their priority.\\
+
+			\textbf{ALGORITHM} \textit{Priority()}\\
+			\null\hspace{1cm}// Returns a new array of jobs sorted by their priority\\
+			\null\hspace{1cm}\textit{$A \gets Jobs.ToArray()$}\\
+			\null\hspace{1cm}\textbf{for} \textit{$i \gets 1$} \textbf{in} \textit{A.Length} \textbf{do} \textit{$i++$}\\
+			\null\hspace{2cm}\textbf{for} \textit{$j \gets i$} \textbf{in} \textit{0} \textbf{do} \textit{$j--$}\\
+			\null\hspace{3cm}\textbf{if} \textit{$A[j].Priority < A[j - 1].Priority$}\\
+			\null\hspace{4cm}\textit{$temp \gets A[j]$}\\
+			\null\hspace{4cm}\textit{$A[j] \gets A[j - 1]$}\\
+			\null\hspace{4cm}\textit{$A[j - 1] \gets temp$}\\
+			\null\hspace{3cm}\textbf{else}\\
+			\null\hspace{4cm}\textbf{break}\\
+			\null\hspace{1cm}\textbf{return} \textit{A}\\
+			
+		\subsection{ShortestJobFirst Method}
+			This method is used to sort jobs for shortest job first scheduling. It achieves this by 
+			using the insertion sort algorithm to sort the jobs by their length.\\
+
+			\textbf{ALGORITHM} \textit{ShortestJobFirst()}\\
+			\null\hspace{1cm}// Returns a new array of jobs sorted by their length\\
+			\null\hspace{1cm}\textit{$A \gets Jobs.ToArray()$}\\
+			\null\hspace{1cm}\textbf{for} \textit{$i \gets 0$} \textbf{in} \textit{$A.Length - 1$} \textbf{do}\\
+			\null\hspace{2cm}\textbf{for} \textit{$j \gets 0$} \textbf{in} \textit{$A.Length - i - 1$} \textbf{do}\\
+			\null\hspace{3cm}\textbf{if} \textit{$A[j].ExecutionTime > A[j + 1].ExecutionTime$}\\
 			\null\hspace{4cm}\textit{$temp \gets A[j]$}\\
 			\null\hspace{4cm}\textit{$A[j] \gets A[j + 1]$}\\
 			\null\hspace{4cm}\textit{$A[j + 1] \gets temp$}\\
 			\null\hspace{1cm}\textbf{return} \textit{A}\\
-	
-	\section{Analysis}
-		\subsection{Jobs ADT}
-		\subsection{JobCollection ADT}
-		\subsection{Scheduler ADT}
 
 	\section{Testing}
 		\subsection{Jobs ADT}
