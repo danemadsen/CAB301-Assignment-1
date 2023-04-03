@@ -116,7 +116,7 @@
 
 				\textbf{ALGORITHM} \textit{Contains(v)}\\
 				\null\qquad\quad// Let (\textit{n}) be count\\
-				\null\qquad\quad// Given a job ID (\textit{v})\\
+				\null\qquad\quad// Given an integer (\textit{v})\\
 				\null\qquad\quad// Returns True if a job with the ID \textit{v} exists in the jobs array (\textit{J})\\
 				\null\qquad\quad// Otherwise returns False\\
 				\null\qquad\quad\textbf{for} \textit{$i \gets 0$} \textbf{in} \textit{n - 1} \textbf{do}\\
@@ -124,6 +124,59 @@
 				\null\qquad\qquad\quad\textbf{return} \textit{True}\\
 				\null\qquad\quad\textbf{else}\\
 				\null\qquad\qquad\textbf{return} \textit{False}
+			
+			\newpage
+
+			\subsubsection{Find Method}
+				This method is used to find a job in the job collection. It achieves this by using the provided 
+				job ID to find the job in the collection. If the job is found, the method returns the job, 
+				otherwise it returns null.\\
+
+				\textbf{ALGORITHM} \textit{Find(v)}\\
+				\null\qquad\quad// Let (\textit{n}) be count\\
+				\null\qquad\quad// Given an integer (\textit{v})\\
+				\null\qquad\quad// Returns the job with the ID \textit{v} if it exists in the jobs array (\textit{J})\\
+				\null\qquad\quad// Otherwise returns null\\
+				\null\qquad\quad\textbf{for} \textit{$i \gets 0$} \textbf{in} \textit{n - 1} \textbf{do}\\
+				\null\qquad\qquad\textbf{if} \textit{$v = J[i].id$}\\
+				\null\qquad\qquad\quad\textbf{return} \textit{J[i]}\\
+				\null\qquad\quad\textbf{return} \textit{null}\\
+
+			\subsubsection{Remove Method}
+				This method is used to remove a job from the job collection. It achieves this by using the 
+				provided job ID to find the job in the collection. If the job is found, the method removes the 
+				job from the collection, decrements the count variable and returns true. If the job is not found, 
+				the method returns false.\\
+
+				\textbf{ALGORITHM} \textit{Remove(v)}\\
+				\null\qquad\quad// Let (\textit{n}) be count\\
+				\null\qquad\quad// Given an integer (\textit{v})\\
+				\null\qquad\quad// Returns True if a job with the ID \textit{v} was removed\\
+				\null\qquad\quad// from the jobs array (\textit{J})\\
+				\null\qquad\quad// Otherwise returns False\\
+				\null\qquad\quad\textbf{for} \textit{$i \gets 0$} \textbf{in} \textit{n - 1} \textbf{do}\\
+				\null\qquad\qquad\textbf{if} \textit{$v = J[i].id$}\\
+				\null\qquad\qquad\qquad\textbf{for} \textit{$j \gets 0$} \textbf{in} \textit{n - 2} \textbf{do}\\
+				\null\qquad\qquad\qquad\quad\textit{$J[j] \gets J[j + 1]$}\\
+				\null\qquad\qquad\qquad\textit{$n \gets n - 1$}\\
+				\null\qquad\qquad\qquad\textbf{return} \textit{True}\\
+				\null\qquad\quad\textbf{return} \textit{False}\\
+			
+			\newpage
+			
+			\subsubsection{ToArray Method}
+				This method is used to convert the job collection to an array. It achieves this by creating a 
+				new array of the same size as the job collection and then copying the jobs from the job 
+				collection to the new array. The method then returns the new array.\\
+
+				\textbf{ALGORITHM} \textit{ToArray()}\\
+				\null\qquad\quad// Let (\textit{n}) be count\\
+				\null\qquad\quad// Returns a new array of copied from the jobs array (\textit{J})\\
+				\null\qquad\quad\textit{$A \gets new Job[n]$}\\
+				\null\qquad\quad\textbf{for} \textit{$i \gets 0$} \textbf{in} \textit{n - 1} \textbf{do}\\
+				\null\qquad\qquad\textit{$A[i] \gets J[i]$}\\
+				\null\qquad\quad\textbf{return} \textit{A}\\
+				
 		\subsection{Scheduler ADT}
 	
 	\section{Analysis}
