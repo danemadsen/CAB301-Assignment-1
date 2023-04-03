@@ -133,5 +133,45 @@ public class Test
         IScheduler shdlr = new Scheduler(Jobs);
 
         Assert.Equal(newJob, shdlr.FirstComeFirstServed()[0]);
+        Assert.NotEqual(newJob, shdlr.FirstComeFirstServed()[2]);
+        Assert.NotEqual(newJob3, shdlr.FirstComeFirstServed()[0]);
+    }
+
+    [Fact]
+    public void PriorityTest()
+    {
+        IJobCollection Jobs = new JobCollection(3);
+        IJob newJob = new Job(1, 1, 1, 1);
+        IJob newJob2 = new Job(2, 2, 2, 2);
+        IJob newJob3 = new Job(3, 3, 3, 3);
+
+        Jobs.Add(newJob3);
+        Jobs.Add(newJob2);
+        Jobs.Add(newJob);
+
+        IScheduler shdlr = new Scheduler(Jobs);
+
+        Assert.Equal(newJob, shdlr.Priority()[0]);
+        Assert.NotEqual(newJob, shdlr.Priority()[2]);
+        Assert.NotEqual(newJob3, shdlr.Priority()[0]);
+    }
+
+    [Fact]
+    public void ShortestJobFirstTest()
+    {
+        IJobCollection Jobs = new JobCollection(3);
+        IJob newJob = new Job(1, 1, 1, 1);
+        IJob newJob2 = new Job(2, 2, 2, 2);
+        IJob newJob3 = new Job(3, 3, 3, 3);
+
+        Jobs.Add(newJob3);
+        Jobs.Add(newJob2);
+        Jobs.Add(newJob);
+
+        IScheduler shdlr = new Scheduler(Jobs);
+
+        Assert.Equal(newJob, shdlr.ShortestJobFirst()[0]);
+        Assert.NotEqual(newJob, shdlr.ShortestJobFirst()[2]);
+        Assert.NotEqual(newJob3, shdlr.ShortestJobFirst()[0]);
     }
 }
