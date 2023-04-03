@@ -117,4 +117,21 @@ public class Test
         Jobs.Add(newJob);
         Assert.Single(Jobs.ToArray());
     }
+
+    [Fact]
+    public void FirstComeFirstServedTest()
+    {
+        IJobCollection Jobs = new JobCollection(3);
+        IJob newJob = new Job(1, 1, 1, 1);
+        IJob newJob2 = new Job(2, 2, 2, 2);
+        IJob newJob3 = new Job(3, 3, 3, 3);
+
+        Jobs.Add(newJob3);
+        Jobs.Add(newJob2);
+        Jobs.Add(newJob);
+
+        IScheduler shdlr = new Scheduler(Jobs);
+
+        Assert.Equal(newJob, shdlr.FirstComeFirstServed()[0]);
+    }
 }
