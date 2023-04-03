@@ -1,13 +1,16 @@
 \contentsline {section}{\numberline {1}Algorithm Design}{2}{}%
 \contentsline {subsection}{\numberline {1.1}Jobs ADT}{2}{}%
 \contentsline {subsubsection}{\numberline {1.1.1}IsValidId Method}{2}{}%
-\contentsline {subsection}{\numberline {1.2}JobCollection ADT}{2}{}%
-\contentsline {subsection}{\numberline {1.3}Scheduler ADT}{2}{}%
-\contentsline {section}{\numberline {2}Analysis}{2}{}%
-\contentsline {subsection}{\numberline {2.1}Jobs ADT}{2}{}%
-\contentsline {subsection}{\numberline {2.2}JobCollection ADT}{2}{}%
-\contentsline {subsection}{\numberline {2.3}Scheduler ADT}{2}{}%
-\contentsline {section}{\numberline {3}Testing}{2}{}%
-\contentsline {subsection}{\numberline {3.1}Jobs ADT}{2}{}%
-\contentsline {subsection}{\numberline {3.2}JobCollection ADT}{2}{}%
-\contentsline {subsection}{\numberline {3.3}Scheduler ADT}{2}{}%
+\contentsline {subsubsection}{\numberline {1.1.2}IsValidExecutionTime Method}{2}{}%
+\contentsline {subsubsection}{\numberline {1.1.3}IsValidPriority Method}{3}{}%
+\contentsline {subsubsection}{\numberline {1.1.4}IsTimeReceived Method}{3}{}%
+\contentsline {subsection}{\numberline {1.2}JobCollection ADT}{4}{}%
+\contentsline {subsection}{\numberline {1.3}Scheduler ADT}{4}{}%
+\contentsline {section}{\numberline {2}Analysis}{4}{}%
+\contentsline {subsection}{\numberline {2.1}Jobs ADT}{4}{}%
+\contentsline {subsection}{\numberline {2.2}JobCollection ADT}{4}{}%
+\contentsline {subsection}{\numberline {2.3}Scheduler ADT}{4}{}%
+\contentsline {section}{\numberline {3}Testing}{4}{}%
+\contentsline {subsection}{\numberline {3.1}Jobs ADT}{4}{}%
+\contentsline {subsection}{\numberline {3.2}JobCollection ADT}{4}{}%
+\contentsline {subsection}{\numberline {3.3}Scheduler ADT}{4}{}%

@@ -23,14 +23,64 @@
 	\section{Algorithm Design}
 		\subsection{Jobs ADT}
 			\subsubsection{IsValidId Method}
-				This method determines whether a provided job ID is valid. It achives this 
+				This method checks whether a provided job ID is valid. It achieves this 
 				by checking that the provided ID is greater than the minimum valid ID (1) and 
 				less than the maximum valid ID (999). If the ID is meets these criteria, the 
 				method returns true indicating the ID is valid, otherwise it returns false 
 				indicating the ID is invalid.\\
 				
 				\textbf{ALGORITHM} \textit{IsValidId(v)}\\
-				\null\qquad// Given a job ID (\textit{v})\\
+				\null\qquad\quad// Given a job ID (\textit{v})\\
+				\null\qquad\quad// Returns True if \textit{v} is a valid ID, otherwise returns False\\
+				\null\qquad\quad\textbf{if} \textit{$v \geq 1$} \textbf{and} \textit{$v \leq 999$}\\
+				\null\qquad\qquad\textbf{return} \textit{True}\\
+				\null\qquad\quad\textbf{else}\\
+				\null\qquad\qquad\textbf{return} \textit{False}
+
+			\subsubsection{IsValidExecutionTime Method}
+				This method simply checks whether a provided job execution time is valid. It achieves 
+				this by simply checking whether the execution time is greater than 0. If the execution 
+				time is greater than 0, the method returns true indicating the execution time is valid,
+				otherwise it returns false indicating the execution time is invalid.\\
+
+				\textbf{ALGORITHM} \textit{IsValidExecutionTime(v)}\\
+				\null\qquad\quad// Given a job execution time (\textit{v})\\
+				\null\qquad\quad// Returns True if \textit{v} is a valid execution time, otherwise returns False\\
+				\null\qquad\quad\textbf{if} \textit{$v > 0$}\\
+				\null\qquad\qquad\textbf{return} \textit{True}\\
+				\null\qquad\quad\textbf{else}\\
+				\null\qquad\qquad\textbf{return} \textit{False}
+
+			\newpage
+
+			\subsubsection{IsValidPriority Method}
+				This method checks whether a provided job priority is valid. It achieves this by 
+				checking that the provided priority is greater than or equal to the minimum valid priority (1) and 
+				less than or equal to the maximum valid priority (9). If the priority is meets these criteria, the 
+				method returns true indicating the priority is valid, otherwise it returns false 
+				indicating the priority is invalid.\\
+
+				\textbf{ALGORITHM} \textit{IsValidPriority(v)}\\
+				\null\qquad\quad// Given a job priority (\textit{v})\\
+				\null\qquad\quad// Returns True if \textit{v} is a valid priority, otherwise returns False\\
+				\null\qquad\quad\textbf{if} \textit{$v \geq 1$} \textbf{and} \textit{$v \leq 9$}\\
+				\null\qquad\qquad\textbf{return} \textit{True}\\
+				\null\qquad\quad\textbf{else}\\
+				\null\qquad\qquad\textbf{return} \textit{False}
+			
+			\subsubsection{IsTimeReceived Method}
+				This method checks whether a provided job time received is valid. It achieves this by
+				checking that the provided time received is greater than zero. If the time received is
+				greater than zero, the method returns true indicating the time received is valid, otherwise
+				it returns false indicating the time received is invalid.\\
+
+				\textbf{ALGORITHM} \textit{IsTimeReceived(v)}\\
+				\null\qquad\quad// Given a job time received (\textit{v})\\
+				\null\qquad\quad// Returns True if \textit{v} is a valid time received, otherwise returns False\\
+				\null\qquad\quad\textbf{if} \textit{$v > 0$}\\
+				\null\qquad\qquad\textbf{return} \textit{True}\\
+				\null\qquad\quad\textbf{else}\\
+				\null\qquad\qquad\textbf{return} \textit{False}
 		\subsection{JobCollection ADT}
 		\subsection{Scheduler ADT}
 	
