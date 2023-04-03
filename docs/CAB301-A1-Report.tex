@@ -178,6 +178,22 @@
 				\null\hspace{1cm}\textbf{return} \textit{A}\\
 				
 		\subsection{Scheduler ADT}
+			\subsubsection{FirstComeFirstServed Method}
+				This method is used to schedule jobs using the first come first served algorithm. It achieves 
+				this by sorting the jobs in the job collection by their arrival time and then adding them to 
+				the schedule in the order they were sorted.\\
+
+				\textbf{ALGORITHM} \textit{FirstComeFirstServed()}\\
+				\null\hspace{1cm}// Let (\textit{n}) be count\\
+				\null\hspace{1cm}// Returns a new array of jobs sorted by their arrival time\\
+				\null\hspace{1cm}\textit{$A \gets J.ToArray()$}\\
+				\null\hspace{1cm}\textbf{for} \textit{$i \gets 0$} \textbf{in} \textit{n - 1} \textbf{do}\\
+				\null\hspace{2cm}\textbf{for} \textit{$j \gets 0$} \textbf{in} \textit{n - 2} \textbf{do}\\
+				\null\hspace{3cm}\textbf{if} \textit{$A[j].arrivalTime > A[j + 1].arrivalTime$}\\
+				\null\hspace{4cm}\textit{$temp \gets A[j]$}\\
+				\null\hspace{4cm}\textit{$A[j] \gets A[j + 1]$}\\
+				\null\hspace{4cm}\textit{$A[j + 1] \gets temp$}\\
+				\null\hspace{1cm}\textbf{return} \textit{A}\\
 	
 	\section{Analysis}
 		\subsection{Jobs ADT}

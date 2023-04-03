@@ -22,7 +22,7 @@ public class JobCollection : IJobCollection {
 
 	public bool Add( IJob job ) {
         for( int i = 0; i < count; i++ ) {
-            if( jobs[i].Id == id ) return false;
+            if( jobs[i].Id == job.Id ) return false;
         }
         jobs[count] = job;
         count++;

@@ -1,0 +1,15 @@
+A:\Study\Bachelor of IT\Y4-S1 - CAB301 - Algorithms and Complexity\Assignment 1\src\obj\Debug\net6.0\src.csproj.AssemblyReference.cache
+A:\Study\Bachelor of IT\Y4-S1 - CAB301 - Algorithms and Complexity\Assignment 1\src\obj\Debug\net6.0\src.GeneratedMSBuildEditorConfig.editorconfig
+A:\Study\Bachelor of IT\Y4-S1 - CAB301 - Algorithms and Complexity\Assignment 1\src\obj\Debug\net6.0\src.AssemblyInfoInputs.cache
+A:\Study\Bachelor of IT\Y4-S1 - CAB301 - Algorithms and Complexity\Assignment 1\src\obj\Debug\net6.0\src.AssemblyInfo.cs
+A:\Study\Bachelor of IT\Y4-S1 - CAB301 - Algorithms and Complexity\Assignment 1\src\obj\Debug\net6.0\src.csproj.CoreCompileInputs.cache
+A:\Study\Bachelor of IT\Y4-S1 - CAB301 - Algorithms and Complexity\Assignment 1\src\bin\Debug\net6.0\src.exe
+A:\Study\Bachelor of IT\Y4-S1 - CAB301 - Algorithms and Complexity\Assignment 1\src\bin\Debug\net6.0\src.deps.json
+A:\Study\Bachelor of IT\Y4-S1 - CAB301 - Algorithms and Complexity\Assignment 1\src\bin\Debug\net6.0\src.runtimeconfig.json
+A:\Study\Bachelor of IT\Y4-S1 - CAB301 - Algorithms and Complexity\Assignment 1\src\bin\Debug\net6.0\src.dll
+A:\Study\Bachelor of IT\Y4-S1 - CAB301 - Algorithms and Complexity\Assignment 1\src\bin\Debug\net6.0\src.pdb
+A:\Study\Bachelor of IT\Y4-S1 - CAB301 - Algorithms and Complexity\Assignment 1\src\obj\Debug\net6.0\src.dll
+A:\Study\Bachelor of IT\Y4-S1 - CAB301 - Algorithms and Complexity\Assignment 1\src\obj\Debug\net6.0\refint\src.dll
+A:\Study\Bachelor of IT\Y4-S1 - CAB301 - Algorithms and Complexity\Assignment 1\src\obj\Debug\net6.0\src.pdb
+A:\Study\Bachelor of IT\Y4-S1 - CAB301 - Algorithms and Complexity\Assignment 1\src\obj\Debug\net6.0\src.genruntimeconfig.cache
+A:\Study\Bachelor of IT\Y4-S1 - CAB301 - Algorithms and Complexity\Assignment 1\src\obj\Debug\net6.0\ref\src.dll

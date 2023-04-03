@@ -10,20 +10,23 @@ public class Scheduler : IScheduler {
 public IJob[] FirstComeFirstServed()
 {
     IJob[] sortedJobs = Jobs.ToArray();
-    for (int i = 0; i < sortedJobs.Length - 1; i++)
+
+    for (int i = 1; i < sortedJobs.Length; i++)
     {
-        for (int j = i + 1; j < sortedJobs.Length; j++)
+        int j = i - 1;
+
+        while (j >= 0 && sortedJobs[j].TimeReceived > sortedJobs[i].TimeReceived)
         {
-            if (sortedJobs[i].ArrivalTime > sortedJobs[j].ArrivalTime)
-            {
-                IJob temp = sortedJobs[i];
-                sortedJobs[i] = sortedJobs[j];
-                sortedJobs[j] = temp;
-            }
+            sortedJobs[j + 1] = sortedJobs[j];
+            j = j - 1;
         }
+
+        sortedJobs[j + 1] = sortedJobs[i];
     }
+
     return sortedJobs;
 }
+
 
 public IJob[] Priority()
 {
@@ -50,7 +53,8 @@ public IJob[] ShortestJobFirst()
     {
         for (int j = i + 1; j < sortedJobs.Length; j++)
         {
-            if (sortedJobs[i].Duration > sortedJobs[j].Duration)
+            if ((sortedJobs[i].ExecutionTime - sortedJobs[i].TimeReceived) > 
+            (sortedJobs[j].ExecutionTime - sortedJobs[j].TimeReceived))
             {
                 IJob temp = sortedJobs[i];
                 sortedJobs[i] = sortedJobs[j];
