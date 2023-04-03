@@ -1,9 +1,9 @@
 using Xunit;
 
-public class testClass
+public class Test
 {
     [Fact]
-    public void ValidIDTest()
+    public void JobTest()
     {
         for (uint i = 1; i <= 999; i++)
         {
@@ -63,5 +63,47 @@ public class testClass
     {
         Assert.False(Job.IsTimeReceived(0));
     }
-    
+
+    [Fact]
+    public void AddJobTest()
+    {
+        IJob newJob = new Job(1, 1, 1, 1);
+        IJobCollection Jobs = new JobCollection(2);
+
+        Assert.True(Jobs.Add(newJob));
+        Assert.False(Jobs.Add(newJob));
+    }
+
+    [Fact]
+    public void ContainsJobTest()
+    {
+        IJob newJob = new Job(1, 1, 1, 1);
+        IJobCollection Jobs = new JobCollection(2);
+
+        Assert.False(Jobs.Contains(newJob.Id));
+        Jobs.Add(newJob);
+        Assert.True(Jobs.Contains(newJob.Id));
+    }
+
+    [Fact]
+    public void FindJobTest()
+    {
+        IJob newJob = new Job(1, 1, 1, 1);
+        IJobCollection Jobs = new JobCollection(2);
+
+        Assert.Null(Jobs.Find(newJob.Id));
+        Jobs.Add(newJob);
+        Assert.Equal(newJob, Jobs.Find(newJob.Id));
+    }
+
+    [Fact]
+    public void RemoveJobTest()
+    {
+        IJob newJob = new Job(1, 1, 1, 1);
+        IJobCollection Jobs = new JobCollection(2);
+
+        Assert.False(Jobs.Remove(newJob.Id));
+        Jobs.Add(newJob);
+        Assert.True(Jobs.Remove(newJob.Id));
+    }
 }
