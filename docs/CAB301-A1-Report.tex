@@ -20,7 +20,7 @@
 	\tableofcontents
 	\newpage
 	
-	\section{Algorithm Design and Analysis}
+	\section{Algorithm Design}
 		\subsection{FirstComeFirstServed Method}
 			This method is used to sort jobs for first come first served scheduling. It achieves 
 			this by using the selection sort algorithm to sort the jobs by their arrival time.\\
@@ -55,7 +55,7 @@
 			
 		\subsection{ShortestJobFirst Method}
 			This method is used to sort jobs for shortest job first scheduling. It achieves this by 
-			using the insertion sort algorithm to sort the jobs by their length.\\
+			using the bubble sort algorithm to sort the jobs by their length.\\
 
 			\textbf{ALGORITHM} \textit{ShortestJobFirst()}\\
 			\null\hspace{1cm}// Returns a new array of jobs sorted by their length\\
@@ -67,6 +67,10 @@
 			\null\hspace{4cm}\textit{$A[j] \gets A[j + 1]$}\\
 			\null\hspace{4cm}\textit{$A[j + 1] \gets temp$}\\
 			\null\hspace{1cm}\textbf{return} \textit{A}\\
+	\section{Analysis}
+		\subsection{FirstComeFirstServed Method}
+		\subsection{Priority Method}
+		\subsection{ShortestJobFirst Method}
 
 	\section{Testing}
 		\subsection{Jobs ADT}
