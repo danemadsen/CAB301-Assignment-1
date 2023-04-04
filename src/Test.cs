@@ -133,8 +133,16 @@ public class Test
         IScheduler shdlr = new Scheduler(Jobs);
 
         Assert.Equal(newJob, shdlr.FirstComeFirstServed()[0]);
+        Assert.NotEqual(newJob, shdlr.FirstComeFirstServed()[1]);
         Assert.NotEqual(newJob, shdlr.FirstComeFirstServed()[2]);
+
+        Assert.Equal(newJob2, shdlr.FirstComeFirstServed()[1]);
+        Assert.NotEqual(newJob2, shdlr.FirstComeFirstServed()[2]);
+        Assert.NotEqual(newJob2, shdlr.FirstComeFirstServed()[0]);
+
+        Assert.Equal(newJob3, shdlr.FirstComeFirstServed()[2]);
         Assert.NotEqual(newJob3, shdlr.FirstComeFirstServed()[0]);
+        Assert.NotEqual(newJob3, shdlr.FirstComeFirstServed()[1]);
     }
 
     [Fact]
@@ -152,8 +160,16 @@ public class Test
         IScheduler shdlr = new Scheduler(Jobs);
 
         Assert.Equal(newJob, shdlr.Priority()[0]);
+        Assert.NotEqual(newJob, shdlr.Priority()[1]);
         Assert.NotEqual(newJob, shdlr.Priority()[2]);
+
+        Assert.Equal(newJob2, shdlr.Priority()[1]);
+        Assert.NotEqual(newJob2, shdlr.Priority()[2]);
+        Assert.NotEqual(newJob2, shdlr.Priority()[0]);
+
+        Assert.Equal(newJob3, shdlr.Priority()[2]);
         Assert.NotEqual(newJob3, shdlr.Priority()[0]);
+        Assert.NotEqual(newJob3, shdlr.Priority()[1]);
     }
 
     [Fact]
@@ -171,7 +187,15 @@ public class Test
         IScheduler shdlr = new Scheduler(Jobs);
 
         Assert.Equal(newJob, shdlr.ShortestJobFirst()[0]);
+        Assert.NotEqual(newJob, shdlr.ShortestJobFirst()[1]);
         Assert.NotEqual(newJob, shdlr.ShortestJobFirst()[2]);
+
+        Assert.Equal(newJob2, shdlr.ShortestJobFirst()[1]);
+        Assert.NotEqual(newJob2, shdlr.ShortestJobFirst()[2]);
+        Assert.NotEqual(newJob2, shdlr.ShortestJobFirst()[0]);
+
+        Assert.Equal(newJob3, shdlr.ShortestJobFirst()[2]);
         Assert.NotEqual(newJob3, shdlr.ShortestJobFirst()[0]);
+        Assert.NotEqual(newJob3, shdlr.ShortestJobFirst()[1]);
     }
 }

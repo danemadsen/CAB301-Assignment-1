@@ -238,8 +238,8 @@
 			iterations for every iteration of the outer loop, where n is the length of the jobs array. Therefore, 
 			the total number of iterations can be expressed as (n - 1) + (n - 2) + ... + 2 + 1, and by again 
 			using the rule of sum of an arithmetic sequence this equation can be further simplified to n(n - 1)/2. 
-			By dropping the constant factor and the lower order terms, the total number of iterations can be 
-			expressed as O($n ^ 2$). Therefore, the worst case time complexity of this method is O($n ^ 2$).\\
+			This is the same as the previous method so therefore, the worst case time complexity of this method 
+			is O($n ^ 2$).\\
 
 		\subsection{Testing}
 	\section{ShortestJobFirst Method}
@@ -259,6 +259,14 @@
 			\null\hspace{1cm}\textbf{return} \textit{A}\\
 
 		\subsection{Analysis}
+			To implement bubble sort, again this method uses a nested for loop to iterate through the array of 
+			jobs. The outer loop performs n - 1 iterations, and the inner loop performs 1, 2, ..., n - 3, n - 2 
+			iterations for every iteration of the outer loop, where n is the length of the jobs array. Therefore, 
+			the total number of iterations can be expressed as 1 + 2 + ... + (n - 3) + (n - 2), and by again 
+			using the rule of sum of an arithmetic sequence this equation can be further simplified to n(n - 1)/2. 
+			This is the same as the previous two methods so therefore, the worst case time complexity of this 
+			method is O($n ^ 2$).\\
+
 		\subsection{Testing}
 
 \end{document}
