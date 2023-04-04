@@ -1,6 +1,7 @@
 \documentclass[12pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
+\usepackage[none]{hyphenat}
 
 \begin{document}
 	\begin{titlepage}
@@ -20,11 +21,175 @@
 	\tableofcontents
 	\newpage
 	
-	\section{Algorithm Design}
-		\subsection{FirstComeFirstServed Method}
+	\section{IsValidId Method}
+		\subsection{Algorithm Design}
+			This method checks whether a provided job ID is valid. It achieves this 
+			by checking that the provided ID is greater than the minimum valid ID (1) and 
+			less than the maximum valid ID (999). If the ID is meets these criteria, the 
+			method returns true indicating the ID is valid, otherwise it returns false 
+			indicating the ID is invalid.\\
+
+			\textbf{ALGORITHM} \textit{IsValidId(v)}\\
+			\null\hspace{1cm}// Given an integer (\textit{v})\\
+			\null\hspace{1cm}// Returns True if \textit{v} is a valid job ID\\
+			\null\hspace{1cm}// Otherwise returns False\\
+			\null\hspace{1cm}\textbf{if} \textit{$v \geq 1$} \textbf{and} \textit{$v \leq 999$}\\
+			\null\hspace{2cm}\textbf{return} \textit{True}\\
+			\null\hspace{1cm}\textbf{else}\\
+			\null\hspace{2cm}\textbf{return} \textit{False}\\
+
+	\section{IsValidExecutionTime Method}
+		\subsection{Algorithm Design}
+			This method simply checks whether a provided job execution time is valid. It achieves 
+			this by simply checking whether the execution time is greater than 0. If the execution 
+			time is greater than 0, the method returns true indicating the execution time is valid,
+			otherwise it returns false indicating the execution time is invalid.\\
+
+			\textbf{ALGORITHM} \textit{IsValidExecutionTime(v)}\\
+			\null\hspace{1cm}// Given an integer (\textit{v})\\
+			\null\hspace{1cm}// Returns True if \textit{v} is a valid job execution time\\
+			\null\hspace{1cm}// Otherwise returns False\\
+			\null\hspace{1cm}\textbf{if} \textit{$v > 0$}\\
+			\null\hspace{2cm}\textbf{return} \textit{True}\\
+			\null\hspace{1cm}\textbf{else}\\
+			\null\hspace{2cm}\textbf{return} \textit{False}
+
+	\newpage
+
+	\section{IsValidPriority Method}
+		\subsection{Algorithm Design}
+			This method checks whether a provided job priority is valid. It achieves this by 
+			checking that the provided priority is greater than or equal to the minimum valid priority (1) and 
+			less than or equal to the maximum valid priority (9). If the priority is meets these criteria, the 
+			method returns true indicating the priority is valid, otherwise it returns false 
+			indicating the priority is invalid.\\
+
+			\textbf{ALGORITHM} \textit{IsValidPriority(v)}\\
+			\null\hspace{1cm}// Given an integer (\textit{v})\\
+			\null\hspace{1cm}// Returns True if \textit{v} is a valid job priority\\
+			\null\hspace{1cm}// Otherwise returns False\\
+			\null\hspace{1cm}\textbf{if} \textit{$v \geq 1$} \textbf{and} \textit{$v \leq 9$}\\
+			\null\hspace{2cm}\textbf{return} \textit{True}\\
+			\null\hspace{1cm}\textbf{else}\\
+			\null\hspace{2cm}\textbf{return} \textit{False}\\
+			
+	\section{IsTimeReceived Method}
+		\subsection{Algorithm Design}
+			This method checks whether a provided job time received is valid. It achieves this by
+			checking that the provided time received is greater than zero. If the time received is
+			greater than zero, the method returns true indicating the time received is valid, otherwise
+			it returns false indicating the time received is invalid.\\
+
+			\textbf{ALGORITHM} \textit{IsTimeReceived(v)}\\
+			\null\hspace{1cm}// Given a job time received (\textit{v})\\
+			\null\hspace{1cm}// Returns True if \textit{v} is a valid time received\\
+			\null\hspace{1cm}// Otherwise returns False\\
+			\null\hspace{1cm}\textbf{if} \textit{$v > 0$}\\
+			\null\hspace{2cm}\textbf{return} \textit{True}\\
+			\null\hspace{1cm}\textbf{else}\\
+			\null\hspace{2cm}\textbf{return} \textit{False}
+		
+	\newpage
+			
+	\section{Add Method}
+		\subsection{Algorithm Design}
+			This method adds a job to the job collection. It achieves this by first checking that the job 
+			doesn't already exist in the collection. If the job does already exist in the collection, the 
+			method returns false indicating the job was not added to the collection. If the job does not 
+			already exist in the collection, the method adds the job to the collection, increments the count 
+			variable and returns true.\\
+
+			\textbf{ALGORITHM} \textit{Add(v)}\\
+			\null\hspace{1cm}// Let (\textit{n}) be count\\
+			\null\hspace{1cm}// Given a job (\textit{v})\\
+			\null\hspace{1cm}// Returns True if \textit{v} was added to the jobs array (\textit{J})\\
+			\null\hspace{1cm}// Otherwise returns False\\
+			\null\hspace{1cm}\textbf{for} \textit{$i \gets 0$} \textbf{in} \textit{n - 1} \textbf{do}\\
+			\null\hspace{2cm}\textbf{if} \textit{$v.id = J[i].id$}\\
+			\null\hspace{3cm}\textbf{return} \textit{False}\\
+			\null\hspace{1cm}\textbf{else}\\
+			\null\hspace{2cm}\textit{$J[n] \gets v$}\\
+			\null\hspace{2cm}\textit{$n \gets n + 1$}\\
+			\null\hspace{2cm}\textbf{return} \textit{True}\\
+
+	\section{Contains Method}
+		\subsection{Algorithm Design}
+			This method is used to check if a job exists in the job collection. It achieves this by 
+			checking if there is a job in the collection with the same ID as the provided job ID. If there is 
+			a job with the same ID the method returns true, otherwise it returns false.\\
+
+			\textbf{ALGORITHM} \textit{Contains(v)}\\
+			\null\hspace{1cm}// Let (\textit{n}) be count\\
+			\null\hspace{1cm}// Given an integer (\textit{v})\\
+			\null\hspace{1cm}// Returns True if a job with the ID \textit{v} exists in the jobs array (\textit{J})\\
+			\null\hspace{1cm}// Otherwise returns False\\
+			\null\hspace{1cm}\textbf{for} \textit{$i \gets 0$} \textbf{in} \textit{n - 1} \textbf{do}\\
+			\null\hspace{2cm}\textbf{if} \textit{$v = J[i].id$}\\
+			\null\hspace{3cm}\textbf{return} \textit{True}\\
+			\null\hspace{1cm}\textbf{else}\\
+			\null\hspace{2cm}\textbf{return} \textit{False}
+			
+	\newpage
+
+	\section{Find Method}
+		\subsection{Algorithm Design}
+			This method is used to find a job in the job collection. It achieves this by using the provided 
+			job ID to find the job in the collection. If the job is found, the method returns the job, 
+			otherwise it returns null.\\
+
+			\textbf{ALGORITHM} \textit{Find(v)}\\
+			\null\hspace{1cm}// Let (\textit{n}) be count\\
+			\null\hspace{1cm}// Given an integer (\textit{v})\\
+			\null\hspace{1cm}// Returns the job with the ID \textit{v} if it exists in the jobs array (\textit{J})\\
+			\null\hspace{1cm}// Otherwise returns null\\
+			\null\hspace{1cm}\textbf{for} \textit{$i \gets 0$} \textbf{in} \textit{n - 1} \textbf{do}\\
+			\null\hspace{2cm}\textbf{if} \textit{$v = J[i].id$}\\
+			\null\hspace{3cm}\textbf{return} \textit{J[i]}\\
+			\null\hspace{1cm}\textbf{return} \textit{null}\\
+
+	\section{Remove Method}
+		\subsection{Algorithm Design}
+			This method is used to remove a job from the job collection. It achieves this by using the 
+			provided job ID to find the job in the collection. If the job is found, the method removes the 
+			job from the collection, decrements the count variable and returns true. If the job is not found, 
+			the method returns false.\\
+
+			\textbf{ALGORITHM} \textit{Remove(v)}\\
+			\null\hspace{1cm}// Let (\textit{n}) be count\\
+			\null\hspace{1cm}// Given an integer (\textit{v})\\
+			\null\hspace{1cm}// Returns True if a job with the ID \textit{v} was removed\\
+			\null\hspace{1cm}// from the jobs array (\textit{J})\\
+			\null\hspace{1cm}// Otherwise returns False\\
+			\null\hspace{1cm}\textbf{for} \textit{$i \gets 0$} \textbf{in} \textit{n - 1} \textbf{do}\\
+			\null\hspace{2cm}\textbf{if} \textit{$v = J[i].id$}\\
+			\null\hspace{4cm}\textbf{for} \textit{$j \gets 0$} \textbf{in} \textit{n - 2} \textbf{do}\\
+			\null\hspace{5cm}\textit{$J[j] \gets J[j + 1]$}\\
+			\null\hspace{4cm}\textit{$n \gets n - 1$}\\
+			\null\hspace{4cm}\textbf{return} \textit{True}\\
+			\null\hspace{1cm}\textbf{return} \textit{False}\\
+			
+	\newpage
+			
+	\section{ToArray Method}
+		\subsection{Algorithm Design}
+			This method is used to convert the job collection to an array. It achieves this by creating a 
+			new array of the same size as the job collection and then copying the jobs from the job 
+			collection to the new array. The method then returns the new array.\\
+
+			\textbf{ALGORITHM} \textit{ToArray()}\\
+			\null\hspace{1cm}// Let (\textit{n}) be count\\
+			\null\hspace{1cm}// Returns a new array of copied from the jobs array (\textit{J})\\
+			\null\hspace{1cm}\textit{$A \gets new Job[n]$}\\
+			\null\hspace{1cm}\textbf{for} \textit{$i \gets 0$} \textbf{in} \textit{n - 1} \textbf{do}\\
+			\null\hspace{2cm}\textit{$A[i] \gets J[i]$}\\
+			\null\hspace{1cm}\textbf{return} \textit{A}\\
+				
+	
+	\section{FirstComeFirstServed Method}
+		\subsection{Algorithm Design}
 			This method is used to sort jobs for first come first served scheduling. It achieves 
 			this by using the selection sort algorithm to sort the jobs by their arrival time.\\
-		
+
 			\textbf{ALGORITHM} \textit{FirstComeFirstServed()}\\
 			\null\hspace{1cm}// Returns a new array of jobs sorted by their arrival time\\
 			\null\hspace{1cm}\textit{$A \gets Jobs.ToArray()$}\\
@@ -35,11 +200,24 @@
 			\null\hspace{4cm}\textit{$A[i] \gets A[j]$}\\
 			\null\hspace{4cm}\textit{$A[j] \gets temp$}\\
 			\null\hspace{1cm}\textbf{return} \textit{A}\\
-
-		\subsection{Priority Method}
+		
+		\subsection{Analysis}
+			To implement selection sort, this method uses a nested for loop to iterate through the
+			array of jobs. The outer loop performs n - 1 iterations, and the inner loop performs 
+			1, 2, ..., n - 2, n - 1 iterations for every iteration of the outer loop, where n is 
+			the length of the jobs array. Therefore, the total number of iterations can be expressed as 
+			1 + 2 + ... + (n - 2) + (n - 1), and using the rule of sum of an arithmetic sequence 
+			this equation can be further simplified to n(n - 1)/2. By dropping the constant factor and 
+			the lower order terms, the total number of iterations can be expressed as O($n ^ 2$). Therefore, 
+			the worst case time complexity of this method is O($n ^ 2$).\\
+			
+		\subsection{Testing}
+	\newpage
+	\section{Priority Method}
+		\subsection{Algorithm Design}
 			This method is used to sort jobs for priority scheduling. It achieves this by using the 
 			insertion sort algorithm to sort the jobs by their priority.\\
-
+			
 			\textbf{ALGORITHM} \textit{Priority()}\\
 			\null\hspace{1cm}// Returns a new array of jobs sorted by their priority\\
 			\null\hspace{1cm}\textit{$A \gets Jobs.ToArray()$}\\
@@ -52,11 +230,23 @@
 			\null\hspace{3cm}\textbf{else}\\
 			\null\hspace{4cm}\textbf{break}\\
 			\null\hspace{1cm}\textbf{return} \textit{A}\\
-			
-		\subsection{ShortestJobFirst Method}
+		
+		\subsection{Analysis}
+			To implement insertion sort, like the previous method this method uses a nested for loop to 
+			iterate through the array of jobs. However, this time the inner loop iterates in reverse. 
+			The outer loop performs n iterations, and the inner loop performs n - 1, n - 2, ..., 2, 1 
+			iterations for every iteration of the outer loop, where n is the length of the jobs array. Therefore, 
+			the total number of iterations can be expressed as (n - 1) + (n - 2) + ... + 2 + 1, and by again 
+			using the rule of sum of an arithmetic sequence this equation can be further simplified to n(n - 1)/2. 
+			By dropping the constant factor and the lower order terms, the total number of iterations can be 
+			expressed as O($n ^ 2$). Therefore, the worst case time complexity of this method is O($n ^ 2$).\\
+
+		\subsection{Testing}
+	\section{ShortestJobFirst Method}
+		\subsection{Algorithm Design}
 			This method is used to sort jobs for shortest job first scheduling. It achieves this by 
 			using the bubble sort algorithm to sort the jobs by their execution time.\\
-
+			
 			\textbf{ALGORITHM} \textit{ShortestJobFirst()}\\
 			\null\hspace{1cm}// Returns a new array of jobs sorted by their execution time\\
 			\null\hspace{1cm}\textit{$A \gets Jobs.ToArray()$}\\
@@ -67,14 +257,8 @@
 			\null\hspace{4cm}\textit{$A[j] \gets A[j + 1]$}\\
 			\null\hspace{4cm}\textit{$A[j + 1] \gets temp$}\\
 			\null\hspace{1cm}\textbf{return} \textit{A}\\
-	\section{Analysis}
-		\subsection{FirstComeFirstServed Method}
-		\subsection{Priority Method}
-		\subsection{ShortestJobFirst Method}
 
-	\section{Testing}
-		\subsection{Jobs ADT}
-		\subsection{JobCollection ADT}
-		\subsection{Scheduler ADT}
+		\subsection{Analysis}
+		\subsection{Testing}
 
 \end{document}
