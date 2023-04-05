@@ -2,6 +2,10 @@
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage[none]{hyphenat}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+\definecolor{darkgreen}{RGB}{0, 150, 0}
 
 \begin{document}
 	\begin{titlepage}
@@ -39,6 +43,14 @@
 			\null\hspace{2cm}\textbf{return} \textit{False}\\
 
 		\subsection{Testing}
+			This method uses unit testing to test that the method is correctly validating the 
+			job ID. Using a for loop, the unit test first tests every valid ID (1-999) to ensure that 
+			the method returns true. It then tests two invalid IDs (0 and 1000) to ensure that the method 
+			returns false.\\
+
+			\textbf{Test Result:} \textbf{\textcolor{darkgreen}{PASS}}\\
+
+	\newpage
 
 	\section{IsValidExecutionTime Method}
 		\subsection{Algorithm Design}
@@ -57,6 +69,12 @@
 			\null\hspace{2cm}\textbf{return} \textit{False}
 
 		\subsection{Testing}
+			This method uses unit testing to test that the method is correctly validating the 
+			job execution time. Using a for loop, the unit test first tests 100 valid execution times 
+			(1-100) to ensure that the method returns true. It then tests one invalid execution time 
+			(0) to ensure that the method returns false.\\
+
+			\textbf{Test Result:} \textbf{\textcolor{darkgreen}{PASS}}\\
 
 	\newpage
 
@@ -78,6 +96,14 @@
 			\null\hspace{2cm}\textbf{return} \textit{False}\\
 			
 		\subsection{Testing}
+			This method uses unit testing to test that the method is correctly validating the 
+			job priority. Using a for loop, the unit test first tests every valid priority (1-9) to ensure that 
+			the method returns true. It then tests two invalid priorities (0 and 10) to ensure that the method 
+			returns false.\\
+
+			\textbf{Test Result:} \textbf{\textcolor{darkgreen}{PASS}}\\
+
+	\newpage
 
 	\section{IsTimeReceived Method}
 		\subsection{Algorithm Design}
@@ -96,6 +122,12 @@
 			\null\hspace{2cm}\textbf{return} \textit{False}
 		
 		\subsection{Testing}
+			This method uses unit testing to test that the method is correctly validating the 
+			job time received. Using a for loop, the unit test first tests 100 valid time received 
+			(1-100) to ensure that the method returns true. It then tests one invalid time received 
+			(0) to ensure that the method returns false.\\
+
+			\textbf{Test Result:} \textbf{\textcolor{darkgreen}{PASS}}\\
 
 	\newpage
 			
@@ -121,6 +153,17 @@
 			\null\hspace{2cm}\textbf{return} \textit{True}\\
 
 		\subsection{Testing}
+			This method uses unit testing to test that the method is correctly adding jobs to the 
+			collection. First, the unit test creates a dummy job with valid properties, and then creates 
+			a dummy job collection. The unit test then attempts to add the dummy job to the dummy job 
+			collection. If this first attempt is successful, the unit test then attempts to add the dummy 
+			job to the dummy job collection again. If the second attempt is unsuccessful, the unit test 
+			passes. This ensures that the method can add a new job, but will not overwrite a job if a job in 
+			the job collection already has the same ID as the job being added.\\
+
+			\textbf{Test Result:} \textbf{\textcolor{darkgreen}{PASS}}\\
+
+	\newpage
 
 	\section{Contains Method}
 		\subsection{Algorithm Design}
@@ -141,7 +184,6 @@
 			
 		\subsection{Testing}
 
-	\newpage
 
 	\section{Find Method}
 		\subsection{Algorithm Design}
@@ -184,7 +226,6 @@
 			
 		\subsection{Testing}
 
-	\newpage
 			
 	\section{ToArray Method}
 		\subsection{Algorithm Design}

@@ -3,64 +3,48 @@ using Xunit;
 public class Test
 {
     [Fact]
-    public void JobTest()
+    public void IsValidIDTest()
     {
         for (uint i = 1; i <= 999; i++)
         {
             Assert.True(Job.IsValidId(i));
         }
-    }
 
-    [Fact]
-    public void InvalidIDTest()
-    {
         Assert.False(Job.IsValidId(0));
         Assert.False(Job.IsValidId(1000));
     }
 
     [Fact]
-    public void ValidExecutionTimeTest()
+    public void IsValidExecutionTimeTest()
     {
         for (uint i = 1; i <= 100; i++)
         {
             Assert.True(Job.IsValidExecutionTime(i));
         }
-    }
 
-    [Fact]
-    public void InvalidExecutionTimeTest()
-    {
         Assert.False(Job.IsValidExecutionTime(0));
     }
 
     [Fact]
-    public void ValidPriorityTest()
+    public void IsValidPriorityTest()
     {
         for (uint i = 1; i <= 9; i++)
         {
             Assert.True(Job.IsValidPriority(i));
         }
-    }
 
-    [Fact]
-    public void InvalidPriorityTest()
-    {
         Assert.False(Job.IsValidPriority(0));
         Assert.False(Job.IsValidPriority(10));
     }
 
     [Fact]
-    public void ValidTimeReceivedTest()
+    public void IsValidTimeReceivedTest()
     {
         for (uint i = 1; i <= 100; i++)
         {
             Assert.True(Job.IsTimeReceived(i));
         }
-    }
 
-    [Fact]
-    public void InvalidTimeReceivedTest()
-    {
         Assert.False(Job.IsTimeReceived(0));
     }
 
