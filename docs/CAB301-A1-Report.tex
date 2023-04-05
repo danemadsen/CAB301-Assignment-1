@@ -183,7 +183,19 @@
 			\null\hspace{2cm}\textbf{return} \textit{False}
 			
 		\subsection{Testing}
+			This method uses unit testing to test that the method is correctly checking if a job exists in 
+			the collection. First, the unit test creates a dummy job with valid properties, and then creates 
+			a dummy job collection. Before adding the dummy job to the dummy job collection, the unit test 
+			first checks that the dummy job does not exist in the dummy job collection. If the dummy job 
+			does not exist in the dummy job collection, the unit test then adds the dummy job to the dummy 
+			job collection. Finally, the unit test again checks that the dummy job exists in the dummy job 
+			collection. If the dummy job exists in the dummy job collection, the unit test passes. This 
+			ensures that jobs are created independantly of the job collection, and that the job collection 
+			can correctly check if a job exists in the collection.\\
 
+			\textbf{Test Result:} \textbf{\textcolor{darkgreen}{PASS}}\\
+
+	\newpage
 
 	\section{Find Method}
 		\subsection{Algorithm Design}
@@ -202,6 +214,18 @@
 			\null\hspace{1cm}\textbf{return} \textit{null}\\
 
 		\subsection{Testing}
+			This method uses unit testing to test that the method is correctly finding a job in the 
+			collection. First, the unit test creates a dummy job with valid properties, and then creates 
+			a dummy job collection. Before adding the dummy job to the dummy job collection, the unit test 
+			first checks that the dummy job cannot be found in the dummy job collection. If the dummy job 
+			cannot be found in the dummy job collection, the unit test then adds the dummy job to the dummy 
+			job collection. Finally, the unit test again checks that the dummy job can be found in the dummy 
+			job collection. If the dummy job can be found in the dummy job collection, the unit test passes. 
+			This ensures that the job collection can correctly find a job in the collection.\\
+
+			\textbf{Test Result:} \textbf{\textcolor{darkgreen}{PASS}}\\
+
+	\newpage
 
 	\section{Remove Method}
 		\subsection{Algorithm Design}
@@ -225,7 +249,18 @@
 			\null\hspace{1cm}\textbf{return} \textit{False}\\
 			
 		\subsection{Testing}
+			This method uses unit testing to test that the method is correctly removing a job from the 
+			collection. First, the unit test creates a dummy job with valid properties, and then creates 
+			a dummy job collection. Before adding the dummy job to the dummy job collection, the unit test 
+			first attemmps to remove the dummy job from the dummy job collection. If the dummy job cannot 
+			be removed from the dummy job collection, the unit test then adds the dummy job to the dummy 
+			job collection. Finally, the unit test again attempts to remove the dummy job from the dummy 
+			job collection. If the dummy job can be removed from the dummy job collection, the unit test 
+			passes. This ensures that the job collection can correctly remove a job from the collection.\\
 
+			\textbf{Test Result:} \textbf{\textcolor{darkgreen}{PASS}}\\
+
+	\newpage
 			
 	\section{ToArray Method}
 		\subsection{Algorithm Design}
@@ -242,6 +277,19 @@
 			\null\hspace{1cm}\textbf{return} \textit{A}\\
 		
 		\subsection{Testing}
+			This method uses unit testing to test that the method is correctly converting the job 
+			collection to an array. First, the unit test creates a dummy job with valid properties, and 
+			then creates a dummy job collection. Before adding the dummy job to the dummy job collection, 
+			the unit test first creates an array from the dummy job collection and checks that is empty. 
+			If the array is empty, the unit test then adds the dummy job to the dummy job collection and 
+			then again creates an array from the dummy job collection. Finally, the unit test checks that 
+			the array contains a single job. If the array contains a single job, the unit test passes. 
+			This ensures that the job collection can correctly convert the job collection to an array, and 
+			that the array contains the same ammount of jobs as the job collection.\\
+
+			\textbf{Test Result:} \textbf{\textcolor{darkgreen}{PASS}}\\
+
+	\newpage
 	
 	\section{FirstComeFirstServed Method}
 		\subsection{Algorithm Design}
