@@ -154,10 +154,10 @@
 
 		\subsection{Testing}
 			This method uses unit testing to test that the method is correctly adding jobs to the 
-			collection. First, the unit test creates a dummy job with valid properties, and then creates 
-			a dummy job collection. The unit test then attempts to add the dummy job to the dummy job 
-			collection. If this first attempt is successful, the unit test then attempts to add the dummy 
-			job to the dummy job collection again. If the second attempt is unsuccessful, the unit test 
+			collection. First, the unit test creates a job with valid properties, and then creates 
+			a job collection. The unit test then attempts to add the job to the job 
+			collection. If this first attempt is successful, the unit test then attempts to add the 
+			job to the job collection again. If the second attempt is unsuccessful, the unit test 
 			passes. This ensures that the method can add a new job, but will not overwrite a job if a job in 
 			the job collection already has the same ID as the job being added.\\
 
@@ -184,12 +184,12 @@
 			
 		\subsection{Testing}
 			This method uses unit testing to test that the method is correctly checking if a job exists in 
-			the collection. First, the unit test creates a dummy job with valid properties, and then creates 
-			a dummy job collection. Before adding the dummy job to the dummy job collection, the unit test 
-			first checks that the dummy job does not exist in the dummy job collection. If the dummy job 
-			does not exist in the dummy job collection, the unit test then adds the dummy job to the dummy 
-			job collection. Finally, the unit test again checks that the dummy job exists in the dummy job 
-			collection. If the dummy job exists in the dummy job collection, the unit test passes. This 
+			the collection. First, the unit test creates a job with valid properties, and then creates 
+			a job collection. Before adding the job to the job collection, the unit test 
+			first checks that the job does not exist in the job collection. If the job 
+			does not exist in the job collection, the unit test then adds the job to the 
+			job collection. Finally, the unit test again checks that the job exists in the job 
+			collection. If the job exists in the job collection, the unit test passes. This 
 			ensures that jobs are created independantly of the job collection, and that the job collection 
 			can correctly check if a job exists in the collection.\\
 
@@ -215,12 +215,12 @@
 
 		\subsection{Testing}
 			This method uses unit testing to test that the method is correctly finding a job in the 
-			collection. First, the unit test creates a dummy job with valid properties, and then creates 
-			a dummy job collection. Before adding the dummy job to the dummy job collection, the unit test 
-			first checks that the dummy job cannot be found in the dummy job collection. If the dummy job 
-			cannot be found in the dummy job collection, the unit test then adds the dummy job to the dummy 
-			job collection. Finally, the unit test again checks that the dummy job can be found in the dummy 
-			job collection. If the dummy job can be found in the dummy job collection, the unit test passes. 
+			collection. First, the unit test creates a job with valid properties, and then creates 
+			a job collection. Before adding the job to the job collection, the unit test 
+			first checks that the job cannot be found in the job collection. If the job 
+			cannot be found in the job collection, the unit test then adds the job to the 
+			job collection. Finally, the unit test again checks that the job can be found in the 
+			job collection. If the job can be found in the job collection, the unit test passes. 
 			This ensures that the job collection can correctly find a job in the collection.\\
 
 			\textbf{Test Result:} \textbf{\textcolor{darkgreen}{PASS}}\\
@@ -250,12 +250,12 @@
 			
 		\subsection{Testing}
 			This method uses unit testing to test that the method is correctly removing a job from the 
-			collection. First, the unit test creates a dummy job with valid properties, and then creates 
-			a dummy job collection. Before adding the dummy job to the dummy job collection, the unit test 
-			first attemmps to remove the dummy job from the dummy job collection. If the dummy job cannot 
-			be removed from the dummy job collection, the unit test then adds the dummy job to the dummy 
-			job collection. Finally, the unit test again attempts to remove the dummy job from the dummy 
-			job collection. If the dummy job can be removed from the dummy job collection, the unit test 
+			collection. First, the unit test creates a job with valid properties, and then creates 
+			a job collection. Before adding the job to the job collection, the unit test 
+			first attemmps to remove the job from the job collection. If the job cannot 
+			be removed from the job collection, the unit test then adds the job to the 
+			job collection. Finally, the unit test again attempts to remove the job from the 
+			job collection. If the job can be removed from the job collection, the unit test 
 			passes. This ensures that the job collection can correctly remove a job from the collection.\\
 
 			\textbf{Test Result:} \textbf{\textcolor{darkgreen}{PASS}}\\
@@ -278,11 +278,11 @@
 		
 		\subsection{Testing}
 			This method uses unit testing to test that the method is correctly converting the job 
-			collection to an array. First, the unit test creates a dummy job with valid properties, and 
-			then creates a dummy job collection. Before adding the dummy job to the dummy job collection, 
-			the unit test first creates an array from the dummy job collection and checks that is empty. 
-			If the array is empty, the unit test then adds the dummy job to the dummy job collection and 
-			then again creates an array from the dummy job collection. Finally, the unit test checks that 
+			collection to an array. First, the unit test creates a job with valid properties, and 
+			then creates a job collection. Before adding the job to the job collection, 
+			the unit test first creates an array from the job collection and checks that is empty. 
+			If the array is empty, the unit test then adds the job to the job collection and 
+			then again creates an array from the job collection. Finally, the unit test checks that 
 			the array contains a single job. If the array contains a single job, the unit test passes. 
 			This ensures that the job collection can correctly convert the job collection to an array, and 
 			that the array contains the same ammount of jobs as the job collection.\\
@@ -317,11 +317,19 @@
 			the lower order terms, the total number of iterations can be expressed as O($n ^ 2$). Therefore, 
 			the worst case time complexity of this method is O($n ^ 2$).\\
 			
+		\newpage
+
 		\subsection{Testing}
 			This method uses unit testing to test that the method is correctly sorting the jobs by 
-			their arrival time. First, the unit test creates a dummy job collection before creating 
-			three dummy jobs with valid properties. The unit test then adds the three dummy jobs to the 
-			dummy job collection from highest to lowest ID
+			their arrival time. First, the unit test creates an empty job array and then creates a 
+			job collection. Next, nine jobs are created with valid properties and added to the 
+			empty job array. The unit test then adds the jobs from the job array to the Jobs collection 
+			in reverse order, this is to ensure the jobs are not already sorted by their arrival time.\\\\
+			Next, a scheduler is created using the Jobs collection, and a new job array is created 
+			using the FirstComeFirstServed method. The unit test then checks that every job in the 
+			new job array exists in their repective index in the job array. It also checks that every job is
+			distinct by checking an identicle job does not exist at any other index. If these conditions are 
+			met the unit test passes.\\
 
 			\textbf{Test Result:} \textbf{\textcolor{darkgreen}{PASS}}\\
 
@@ -354,7 +362,25 @@
 			This is the same as the previous method so therefore, the worst case time complexity of this method 
 			is O($n ^ 2$).\\
 
+		\newpage
+
 		\subsection{Testing}
+			The unit test for this method is the same as the previous method. The only difference is that 
+			Priority() is used instead of FirstComeFirstServed().\\\\
+			First, the unit test creates an empty job array and then creates a job collection. Next, nine 
+			jobs are created with valid properties and added to the empty job array. The unit test then adds 
+			the jobs from the job array to the Jobs collection in reverse order, this is to ensure the jobs 
+			are not already sorted by their priority.\\\\
+			Next, a scheduler is created using the Jobs collection, and a new job array is created 
+			using the Priority method. The unit test then checks that every job in the 
+			new job array exists in their repective index in the job array. It also checks that every job is
+			distinct by checking an identicle job does not exist at any other index. If these conditions are 
+			met the unit test passes.\\
+
+			\textbf{Test Result:} \textbf{\textcolor{darkgreen}{PASS}}\\
+
+	\newpage
+
 	\section{ShortestJobFirst Method}
 		\subsection{Algorithm Design}
 			This method is used to sort jobs for shortest job first scheduling. It achieves this by 
@@ -380,6 +406,21 @@
 			This is the same as the previous two methods so therefore, the worst case time complexity of this 
 			method is O($n ^ 2$).\\
 
+		\newpage
+
 		\subsection{Testing}
+			The unit test for this method is the same as the previous two methods. The only difference is that 
+			ShortestJobFirst() is used instead of\\ FirstComeFirstServed() or Priority().\\\\
+			First, the unit test creates an empty job array and then creates a job collection. Next, nine
+			jobs are created with valid properties and added to the empty job array. The unit test then adds
+			the jobs from the job array to the Jobs collection in reverse order, this is to ensure the jobs
+			are not already sorted by their execution time.\\\\
+			Next, a scheduler is created using the Jobs collection, and a new job array is created 
+			using the ShortestJobFirst method. The unit test then checks that every job in the
+			new job array exists in their respective index in the job array. It also checks that every job is
+			distinct by checking an identicle job does not exist at any other index. If these conditions 
+			are met the unit test passes.\\
+
+			\textbf{Test Result:} \textbf{\textcolor{darkgreen}{PASS}}\\
 
 \end{document}
