@@ -105,84 +105,91 @@ public class Test
     [Fact]
     public void FirstComeFirstServedTest()
     {
-        IJobCollection Jobs = new JobCollection(3);
-        IJob newJob = new Job(1, 1, 1, 1);
-        IJob newJob2 = new Job(2, 2, 2, 2);
-        IJob newJob3 = new Job(3, 3, 3, 3);
+        IJob[] newJobs = new IJob[9];
+        IJobCollection Jobs = new JobCollection((uint) newJobs.Length);
+        
+        for (uint i = 0; i < newJobs.Length; i++)
+        {
+            newJobs[i] = new Job(i + 1,(int) i + 1, i + 1, i + 1);
+        }
 
-        Jobs.Add(newJob3);
-        Jobs.Add(newJob2);
-        Jobs.Add(newJob);
+        for (int i = newJobs.Length - 1; i >= 0; i--)
+        {
+            Jobs.Add(newJobs[i]);
+        }
 
         IScheduler shdlr = new Scheduler(Jobs);
         IJob[] sortedJobs = shdlr.FirstComeFirstServed();
+        
+        for (uint i = 0; i < newJobs.Length; i++)
+        {
+            Assert.Equal(newJobs[i], sortedJobs[i]);
 
-        Assert.Equal(newJob, sortedJobs[0]);
-        Assert.NotEqual(newJob, sortedJobs[1]);
-        Assert.NotEqual(newJob, sortedJobs[2]);
+            for (uint j = i + 1; j < newJobs.Length; j++)
+            {
+                Assert.NotEqual(newJobs[i], sortedJobs[j]);
+            }
+        }
 
-        Assert.Equal(newJob2, sortedJobs[1]);
-        Assert.NotEqual(newJob2, sortedJobs[2]);
-        Assert.NotEqual(newJob2, sortedJobs[0]);
-
-        Assert.Equal(newJob3, sortedJobs[2]);
-        Assert.NotEqual(newJob3, sortedJobs[0]);
-        Assert.NotEqual(newJob3, sortedJobs[1]);
     }
 
     [Fact]
     public void PriorityTest()
     {
-        IJobCollection Jobs = new JobCollection(3);
-        IJob newJob = new Job(1, 1, 1, 1);
-        IJob newJob2 = new Job(2, 2, 2, 2);
-        IJob newJob3 = new Job(3, 3, 3, 3);
+        IJob[] newJobs = new IJob[9];
+        IJobCollection Jobs = new JobCollection((uint) newJobs.Length);
+        
+        for (uint i = 0; i < newJobs.Length; i++)
+        {
+            newJobs[i] = new Job(i + 1,(int) i + 1, i + 1, i + 1);
+        }
 
-        Jobs.Add(newJob3);
-        Jobs.Add(newJob2);
-        Jobs.Add(newJob);
+        for (int i = newJobs.Length - 1; i >= 0; i--)
+        {
+            Jobs.Add(newJobs[i]);
+        }
 
         IScheduler shdlr = new Scheduler(Jobs);
         IJob[] sortedJobs = shdlr.Priority();
+        
+        for (uint i = 0; i < newJobs.Length; i++)
+        {
+            Assert.Equal(newJobs[i], sortedJobs[i]);
 
-        Assert.Equal(newJob, sortedJobs[0]);
-        Assert.NotEqual(newJob, sortedJobs[1]);
-        Assert.NotEqual(newJob, sortedJobs[2]);
-
-        Assert.Equal(newJob2, sortedJobs[1]);
-        Assert.NotEqual(newJob2, sortedJobs[2]);
-        Assert.NotEqual(newJob2, sortedJobs[0]);
-
-        Assert.Equal(newJob3, sortedJobs[2]);
-        Assert.NotEqual(newJob3, sortedJobs[0]);
-        Assert.NotEqual(newJob3, sortedJobs[1]);
+            for (uint j = i + 1; j < newJobs.Length; j++)
+            {
+                Assert.NotEqual(newJobs[i], sortedJobs[j]);
+            }
+        }
     }
 
     [Fact]
     public void ShortestJobFirstTest()
     {
-        IJobCollection Jobs = new JobCollection(3);
-        IJob newJob = new Job(1, 1, 1, 1);
-        IJob newJob2 = new Job(2, 2, 2, 2);
-        IJob newJob3 = new Job(3, 3, 3, 3);
+        IJob[] newJobs = new IJob[9];
+        IJobCollection Jobs = new JobCollection((uint) newJobs.Length);
+        
+        for (uint i = 0; i < newJobs.Length; i++)
+        {
+            newJobs[i] = new Job(i + 1,(int) i + 1, i + 1, i + 1);
+        }
 
-        Jobs.Add(newJob3);
-        Jobs.Add(newJob2);
-        Jobs.Add(newJob);
+        for (int i = newJobs.Length - 1; i >= 0; i--)
+        {
+            Jobs.Add(newJobs[i]);
+        }
 
         IScheduler shdlr = new Scheduler(Jobs);
         IJob[] sortedJobs = shdlr.ShortestJobFirst();
+        
+        for (uint i = 0; i < newJobs.Length; i++)
+        {
+            Assert.Equal(newJobs[i], sortedJobs[i]);
 
-        Assert.Equal(newJob, sortedJobs[0]);
-        Assert.NotEqual(newJob, sortedJobs[1]);
-        Assert.NotEqual(newJob, sortedJobs[2]);
-
-        Assert.Equal(newJob2, sortedJobs[1]);
-        Assert.NotEqual(newJob2, sortedJobs[2]);
-        Assert.NotEqual(newJob2, sortedJobs[0]);
-
-        Assert.Equal(newJob3, sortedJobs[2]);
-        Assert.NotEqual(newJob3, sortedJobs[0]);
-        Assert.NotEqual(newJob3, sortedJobs[1]);
+            for (uint j = i + 1; j < newJobs.Length; j++)
+            {
+                Assert.NotEqual(newJobs[i], sortedJobs[j]);
+            }
+        }
     }
 }
